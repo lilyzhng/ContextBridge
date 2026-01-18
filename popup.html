@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContextBridge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>ContextBridge</h1>
+      <p class="subtitle">Extract ChatGPT Conversation</p>
+    </div>
+    
+    <div id="status" class="status hidden">
+      <div class="spinner"></div>
+      <p id="status-text">提取中...</p>
+    </div>
+    
+    <div id="content">
+      <button id="extract-btn" class="primary-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        提取对话
+      </button>
+      
+      <div id="message" class="message hidden"></div>
+      
+      <div class="info">
+        <p class="info-text">点击按钮提取当前 ChatGPT 对话</p>
+        <p class="version">v0.1.0</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
+
